@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.25rem;
+        
+        /* Warm editorial palette - light mode */
+        --background: 0.92 0.015 55;
+        --foreground: 0.25 0.01 45;
+        --card: 0.95 0.01 50;
+        --card-foreground: 0.25 0.01 45;
+        --popover: 0.95 0.01 50;
+        --popover-foreground: 0.25 0.01 45;
+        --primary: 0.35 0.015 45;
+        --primary-foreground: 0.95 0.01 50;
+        --secondary: 0.88 0.02 50;
+        --secondary-foreground: 0.25 0.01 45;
+        --muted: 0.88 0.02 50;
+        --muted-foreground: 0.50 0.01 45;
+        --accent: 0.85 0.025 48;
+        --accent-foreground: 0.25 0.01 45;
+        --destructive: 0.55 0.20 25;
+        --destructive-foreground: 0.95 0.01 50;
+        --border: 0.82 0.015 50;
+        --input: 0.82 0.015 50;
+        --ring: 0.60 0.02 45;
+        
+        /* Editorial-specific colors */
+        --editorial-paper: 0.94 0.012 52;
+        --editorial-charcoal: 0.28 0.012 45;
+        --editorial-warm-beige: 0.88 0.025 55;
+        --editorial-taupe: 0.65 0.02 48;
+        
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+        --sidebar: 0.95 0.01 50;
+        --sidebar-foreground: 0.25 0.01 45;
+        --sidebar-primary: 0.35 0.015 45;
+        --sidebar-primary-foreground: 0.95 0.01 50;
+        --sidebar-accent: 0.88 0.02 50;
+        --sidebar-accent-foreground: 0.25 0.01 45;
+        --sidebar-border: 0.82 0.015 50;
+        --sidebar-ring: 0.60 0.02 45;
+    }
+
+    .dark {
+        --background: 0.20 0.01 45;
+        --foreground: 0.92 0.01 50;
+        --card: 0.25 0.01 45;
+        --card-foreground: 0.92 0.01 50;
+        --popover: 0.25 0.01 45;
+        --popover-foreground: 0.92 0.01 50;
+        --primary: 0.85 0.02 50;
+        --primary-foreground: 0.25 0.01 45;
+        --secondary: 0.30 0.015 45;
+        --secondary-foreground: 0.92 0.01 50;
+        --muted: 0.30 0.015 45;
+        --muted-foreground: 0.65 0.015 48;
+        --accent: 0.35 0.02 48;
+        --accent-foreground: 0.92 0.01 50;
+        --destructive: 0.60 0.18 25;
+        --destructive-foreground: 0.92 0.01 50;
+        --border: 0.35 0.015 45;
+        --input: 0.35 0.015 45;
+        --ring: 0.70 0.02 50;
+        
+        /* Editorial-specific colors - dark mode */
+        --editorial-paper: 0.28 0.012 45;
+        --editorial-charcoal: 0.88 0.015 52;
+        --editorial-warm-beige: 0.40 0.02 48;
+        --editorial-taupe: 0.50 0.018 48;
+        
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+        --sidebar: 0.25 0.01 45;
+        --sidebar-foreground: 0.92 0.01 50;
+        --sidebar-primary: 0.85 0.02 50;
+        --sidebar-primary-foreground: 0.25 0.01 45;
+        --sidebar-accent: 0.30 0.015 45;
+        --sidebar-accent-foreground: 0.92 0.01 50;
+        --sidebar-border: 0.35 0.015 45;
+        --sidebar-ring: 0.70 0.02 50;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "kern" 1, "liga" 1;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@layer components {
+    /* Book styles */
+    .book-container {
+        @apply relative w-full;
+        perspective: 2000px;
+    }
+    
+    .book-shadow {
+        @apply absolute inset-0 rounded-sm;
+        box-shadow: 
+            0 20px 60px -10px rgba(0, 0, 0, 0.15),
+            0 10px 30px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .book-spread {
+        @apply relative bg-editorial-paper rounded-sm overflow-hidden;
+        min-height: 600px;
+        max-height: 85vh;
+        aspect-ratio: 16/10;
+    }
+    
+    .book-spread.single-page {
+        aspect-ratio: 8/10;
+    }
+    
+    .pages-container {
+        @apply relative w-full h-full;
+    }
+    
+    .pages-container.spread {
+        @apply flex;
+    }
+    
+    .page {
+        @apply relative bg-editorial-paper overflow-auto;
+        background-image: url('/assets/generated/paper-texture.dim_1024x1024.png');
+        background-size: 400px 400px;
+        background-repeat: repeat;
+        background-blend-mode: multiply;
+    }
+    
+    .page-left,
+    .page-right {
+        @apply flex-1;
+    }
+    
+    .page-single {
+        @apply w-full h-full;
+    }
+    
+    .page-content {
+        @apply relative z-10 w-full h-full;
+    }
+    
+    .book-spine {
+        @apply w-1;
+        background: linear-gradient(to right, 
+            oklch(var(--editorial-charcoal) / 0.05), 
+            oklch(var(--editorial-charcoal) / 0.10), 
+            oklch(var(--editorial-charcoal) / 0.05)
+        );
+        box-shadow: 
+            -2px 0 4px rgba(0, 0, 0, 0.05),
+            2px 0 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Portrait frame styling */
+    .portrait-frame {
+        @apply relative;
+    }
+    
+    .portrait-frame img {
+        @apply transition-transform duration-300;
+    }
+    
+    .shadow-editorial {
+        box-shadow: 
+            0 4px 12px rgba(0, 0, 0, 0.08),
+            0 2px 6px rgba(0, 0, 0, 0.06),
+            0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+    
+    /* Page flip animation */
+    .page-flip-layer {
+        @apply absolute inset-0 pointer-events-none z-30;
+    }
+    
+    .flipping-page {
+        @apply absolute top-0 bottom-0 w-1/2 bg-editorial-paper;
+        background-image: url('/assets/generated/paper-texture.dim_1024x1024.png');
+        background-size: 400px 400px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        transform-origin: left center;
+        animation: pageFlipForward 0.6s ease-in-out;
+    }
+    
+    .page-flip-layer.forward .flipping-page {
+        @apply right-0;
+        transform-origin: left center;
+        animation: pageFlipForward 0.6s ease-in-out;
+    }
+    
+    .page-flip-layer.backward .flipping-page {
+        @apply left-0;
+        transform-origin: right center;
+        animation: pageFlipBackward 0.6s ease-in-out;
+    }
+    
+    @keyframes pageFlipForward {
+        0% {
+            transform: perspective(2000px) rotateY(0deg);
+        }
+        50% {
+            transform: perspective(2000px) rotateY(-90deg);
+        }
+        100% {
+            transform: perspective(2000px) rotateY(-180deg);
+        }
+    }
+    
+    @keyframes pageFlipBackward {
+        0% {
+            transform: perspective(2000px) rotateY(-180deg);
+        }
+        50% {
+            transform: perspective(2000px) rotateY(-90deg);
+        }
+        100% {
+            transform: perspective(2000px) rotateY(0deg);
+        }
+    }
+    
+    /* Animated gradient */
+    @keyframes gradient {
+        0%, 100% {
+            transform: translate(0, 0) scale(1);
+            opacity: 0.3;
+        }
+        50% {
+            transform: translate(10%, 5%) scale(1.1);
+            opacity: 0.4;
+        }
+    }
+    
+    .animate-gradient {
+        animation: gradient 20s ease-in-out infinite;
+    }
+    
+    /* Grain texture */
+    .grain-texture {
+        animation: grain 8s steps(10) infinite;
+    }
+    
+    @keyframes grain {
+        0%, 100% { transform: translate(0, 0); }
+        10% { transform: translate(-5%, -10%); }
+        20% { transform: translate(-15%, 5%); }
+        30% { transform: translate(7%, -25%); }
+        40% { transform: translate(-5%, 25%); }
+        50% { transform: translate(-15%, 10%); }
+        60% { transform: translate(15%, 0%); }
+        70% { transform: translate(0%, 15%); }
+        80% { transform: translate(3%, 35%); }
+        90% { transform: translate(-10%, 10%); }
+    }
+    
+    /* Texture utilities */
+    .paper-texture {
+        background-image: url('/assets/generated/paper-texture.dim_1024x1024.png');
+        background-size: 400px 400px;
+        background-repeat: repeat;
+    }
+    
+    .book-cloth-texture {
+        background-image: url('/assets/generated/book-cloth.dim_1024x1024.png');
+        background-size: 300px 300px;
+        background-repeat: repeat;
+    }
+}
+
+@layer utilities {
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        .animate-gradient,
+        .grain-texture {
+            animation: none !important;
+        }
+        
+        .page-flip-layer .flipping-page {
+            animation-duration: 0.3s !important;
+        }
+    }
+}

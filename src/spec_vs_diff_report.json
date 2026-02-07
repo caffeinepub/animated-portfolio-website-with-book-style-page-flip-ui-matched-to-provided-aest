@@ -1,0 +1,40 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T20:25:25.726Z",
+  "summary": "CoverPage text updates appear implemented and the portrait is referenced, but the required new static portrait asset under frontend/public/assets/generated is not shown as added in the diff. There are also broader global CSS/palette changes that were not requested by REQ-9/REQ-10.",
+  "missing_requirements": [
+    {
+      "id": "REQ-9",
+      "requirement": "Add a new static image asset derived from the uploaded portrait under frontend/public/assets/generated and reference it from the cover page component.",
+      "reason": "The CoverPage references /assets/generated/shivangi-portrait.dim_900x1200.jpg, but the diff shows no added files, so the required new portrait asset is not evidenced as added under frontend/public/assets/generated.",
+      "evidence": [
+        "frontend/src/features/portfolio/pages/CoverPage.tsx (img src=\"/assets/generated/shivangi-portrait.dim_900x1200.jpg\")",
+        "File diff summary: ADDED FILES: none"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Broad global editorial palette/color-token changes in frontend/src/index.css (beyond cover-page portrait + copy update).",
+      "reason": "REQ-9/REQ-10 request updating the cover page (portrait + specific cover text) and keeping overall layout style; they do not request revising the global OKLCH palette variables or other global style tokens.",
+      "evidence": [
+        "frontend/src/index.css (large set of :root and .dark CSS variable edits for background/foreground/primary/etc. plus editorial-specific tokens)"
+      ]
+    },
+    {
+      "description": "Addition/usage of a cover CTA line: “Click right to explore →”.",
+      "reason": "REQ-10 only specifies changing the top-left label, year label, and three highlight lines; it does not request adding or changing a call-to-action line.",
+      "evidence": [
+        "frontend/src/features/portfolio/pages/CoverPage.tsx (renders “Click right to explore →”)"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/features/portfolio/pages/CoverPage.tsx",
+    "frontend/src/index.css",
+    "project_state.json"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Magazine cover refresh: add portrait + update cover copy",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "summary": "Add a static portrait image block to the cover page with editorial styling and responsive behavior for single-page (mobile) and spread (desktop) layouts.",
+      "acceptanceCriteria": [
+        "A new static image asset derived from the uploaded portrait is added under frontend/public/assets/generated and is referenced by the cover page component.",
+        "The Cover page displays the portrait in a dedicated image block (not as a full-background image) with consistent spacing and typography relative to the current cover design.",
+        "On small screens (single-page mode), the portrait scales/crops without overflowing and text remains legible (no overlap).",
+        "On larger screens (spread mode), the portrait and cover typography remain balanced and aligned; no layout shifts during page flips."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/shivangi-portrait.dim_900x1200.jpg",
+          "operation": "create",
+          "description": "Add the generated, cropped/retouched portrait image asset at frontend/public/assets/generated/shivangi-portrait.dim_900x1200.jpg so it can be referenced by the Cover page as a static asset."
+        },
+        {
+          "path": "frontend/src/features/portfolio/pages/CoverPage.tsx",
+          "operation": "modify",
+          "description": "Add a dedicated portrait image block to the cover layout (use an <img> referencing frontend/public/assets/generated/shivangi-portrait.dim_900x1200.jpg) and adjust layout to remain readable and stable in both single-page (stacked) and spread (two-column/balanced) modes without changing page-flip behavior."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/adjust editorial utility styles (scoped via class selectors used by CoverPage) to give the portrait block a paper-like feel (soft edges, subtle shadow, optional grain-like overlay) while ensuring responsive cropping (object-fit) and preventing text overlap."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Update cover page copy strings (name label, year label, and three highlight lines) while preserving existing typography and layout style, without affecting other pages.",
+      "acceptanceCriteria": [
+        "frontend/src/features/portfolio/pages/CoverPage.tsx reflects the exact string “SHIVANGI KUMAR'” in place of “Portfolio”.",
+        "The cover displays “2026 collection” exactly (including the word “collection”).",
+        "The cover includes the three requested updated lines: “BTech Computer Science”, “1st year”, and “Banasthali Vidyapeeth”, styled consistently with existing cover microtype (uppercase tracking, muted charcoal) and aligned cleanly in the cover layout.",
+        "No other portfolio pages’ copy is unintentionally changed."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/portfolio/pages/CoverPage.tsx",
+          "operation": "modify",
+          "description": "Replace cover text: top-left label to exactly “SHIVANGI KUMAR'”; update year label to exactly “2026 collection”; add/update the three cover highlight lines to exactly “BTech Computer Science”, “1st year”, and “Banasthali Vidyapeeth”, keeping existing font choices, hierarchy, microtype styling (uppercase tracking, muted charcoal), and avoiding changes to other pages."
+        }
+      ]
+    }
+  ]
+}

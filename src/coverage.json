@@ -1,0 +1,55 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T20:25:25.729Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Update the cover page text content while keeping the same font choices, typographic hierarchy, and overall layout style: change the top-left label from “Portfolio” to “SHIVANGI KUMAR'”; change the year label to read “2026 collection”; and update the three cover highlight lines so that “Brand Design” becomes “BTech Computer Science”, “Product Design” becomes “1st year”, and “Packaging” becomes “Banasthali Vidyapeeth”.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/features/portfolio/pages/CoverPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/features/portfolio/pages/CoverPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Add the user’s uploaded portrait photo to the magazine cover (first page) and style it to match the existing editorial cover aesthetic (soft edges/shadows, paper-like feel). The cover must remain readable and responsive in both single-page (mobile) and spread (desktop) layouts.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/shivangi-portrait.dim_900x1200.jpg",
+          "frontend/src/features/portfolio/pages/CoverPage.tsx",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/shivangi-portrait.dim_900x1200.jpg",
+          "frontend/src/features/portfolio/pages/CoverPage.tsx",
+          "frontend/src/index.css"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/shivangi-portrait.dim_900x1200.jpg",
+    "frontend/src/features/portfolio/pages/CoverPage.tsx",
+    "frontend/src/index.css",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

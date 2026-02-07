@@ -1,2 +1,3 @@
-# animated-portfolio-website-with-book-style-page-flip-ui-matched-to-provided-aest
-Exported from Caffeine project: Animated portfolio website with book-style page-flip UI (matched to provided aesthetic)
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
