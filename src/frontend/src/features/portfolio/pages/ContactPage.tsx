@@ -31,11 +31,11 @@ export function ContactPage() {
                 Email
               </div>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:shivangikumar2007@gmail.com"
                 className="font-serif text-lg text-editorial-charcoal hover:text-editorial-charcoal/70 transition-colors inline-flex items-center gap-2"
               >
                 <Mail className="w-4 h-4" />
-                hello@example.com
+                shivangikumar2007@gmail.com
               </a>
             </div>
             
@@ -44,7 +44,7 @@ export function ContactPage() {
                 Location
               </div>
               <div className="font-serif text-lg text-editorial-charcoal">
-                New York, NY
+                Banasthali Vidyapeeth, Rajasthan, India
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ export function ContactPage() {
             </h3>
             <div className="space-y-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/shivangi-kumar-505225363"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-editorial-charcoal/70 hover:text-editorial-charcoal transition-colors group"
@@ -66,7 +66,7 @@ export function ContactPage() {
                 <span className="font-sans text-sm">LinkedIn</span>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/shivangikumar2007"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-editorial-charcoal/70 hover:text-editorial-charcoal transition-colors group"

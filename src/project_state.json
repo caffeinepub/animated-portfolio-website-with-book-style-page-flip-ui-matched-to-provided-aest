@@ -1,89 +1,24 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "Portfolio website with animated background matching a provided image aesthetic/color scheme, presented as an interactive book/magazine with page-flip navigation.",
+  "projectStateVersion": 3,
+  "summary": "Personal website/About Me page update: convert 'Skills and Services' section into a 'Skills' page and update listed skills/projects.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Cropped/retouched portrait photo (shivangi-portrait.dim_900x1200.jpg)",
   "existing_features": [
     {
-      "id": "feature-create-a-portfolio-landing-experience-that-matches-the-aesthetic-color-scheme-of-the-uploaded-reference-image-warm-beige-taupe-neutrals-soft-shadows-editorial-minimal-layout-apply-this-visual-system-consistently-across-typography-spacing-and-components-avoid-introducing-unrelated-bright-accent-colors",
-      "title": "Create a portfolio landing experience that matches the aesthetic/color scheme of the uploaded reference image (warm beige/taupe neutrals, soft shadows, editorial minimal layout). Apply this visual system consistently across typography, spacing, and components (avoid introducing unrelated bright accent colors).",
+      "id": "feature-update-frontend-src-features-portfolio-pages-skillsservicespage-tsx-to-remove-the-services-section-entirely-and-replace-the-skills-content-with-these-sections-core-skills-programming-languages-a-bulleted-list-containing-java-python-c-dart-javascript-projects-built-a-list-containing-mini-amazon-java-mini-tally-java-mini-calculator-c-period-tracker-dart-extra-skills-a-list-containing-poet-writer",
+      "title": "Update `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx` to remove the Services section entirely and replace the Skills content with these sections:\n- Core Skills → Programming Languages: a bulleted list containing Java, Python, C, Dart, JavaScript\n- Projects Built: a list containing Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart)\n- Extra Skills: a list containing Poet, Writer",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-implement-an-animated-background-that-complements-the-reference-aesthetic-subtle-non-distracting-layered-gradients-soft-film-grain-slow-moving-abstract-shapes-particles-the-animation-must-remain-performant-and-not-reduce-text-readability",
-      "title": "Implement an animated background that complements the reference aesthetic (subtle, non-distracting): layered gradients + soft film grain + slow-moving abstract shapes/particles. The animation must remain performant and not reduce text readability.",
+      "id": "feature-change-the-skills-page-heading-text-from-skills-services-to-skills-in-frontend-src-features-portfolio-pages-skillsservicespage-tsx-and-remove-services-from-any-related-page-labeling-used-for-navigation-table-of-contents-by-updating-the-title-in-frontend-src-features-portfolio-portfoliopages-tsx-from-skills-services-to-skills",
+      "title": "Change the Skills page heading text from \"Skills & Services\" to \"Skills\" in `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx`, and remove 'Services' from any related page labeling used for navigation/table of contents by updating the title in `frontend/src/features/portfolio/portfolioPages.tsx` from \"Skills & Services\" to \"Skills\".",
       "reqIds": [
         "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-an-interactive-book-magazine-ui-as-the-main-navigation-a-book-appears-centered-on-screen-with-two-visible-pages-left-right-clicking-tapping-the-right-side-flips-to-the-next-spread-clicking-tapping-the-left-side-flips-to-the-previous-spread-provide-smooth-page-flip-animation-and-realistic-depth-shadow-cues",
-      "title": "Create an interactive book/magazine UI as the main navigation: a book appears centered on screen with two visible pages (left/right). Clicking/tapping the right side flips to the next spread; clicking/tapping the left side flips to the previous spread. Provide smooth page-flip animation and realistic depth/shadow cues.",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-define-initial-portfolio-content-as-a-set-of-magazine-style-pages-static-content-in-the-frontend-cover-about-skills-services-projects-at-least-2-sample-project-pages-and-contact-each-page-should-be-laid-out-like-an-editorial-spread-with-headings-subheads-body-copy-and-image-blocks-that-match-the-reference-style",
-      "title": "Define initial portfolio content as a set of magazine-style pages (static content in the frontend): Cover, About, Skills/Services, Projects (at least 2 sample project pages), and Contact. Each page should be laid out like an editorial spread with headings, subheads, body copy, and image blocks that match the reference style.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-usability-controls-for-the-book-navigation-keyboard-navigation-arrowleft-arrowright-visible-but-subtle-pagination-indicator-e-g-3-10-and-a-table-of-contents-page-that-allows-jumping-to-a-selected-page-spread",
-      "title": "Add usability controls for the book navigation: keyboard navigation (ArrowLeft/ArrowRight), visible but subtle pagination indicator (e.g., “3 / 10”), and a Table of Contents page that allows jumping to a selected page/spread.",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-make-the-book-experience-responsive-on-small-screens-render-as-a-single-page-view-with-the-same-flip-navigation-tap-right-edge-for-next-left-edge-for-previous-and-maintain-the-same-aesthetic-with-readable-typography",
-      "title": "Make the book experience responsive: on small screens, render as a single-page view with the same flip navigation (tap right edge for next, left edge for previous) and maintain the same aesthetic with readable typography.",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-lightweight-backend-placeholder-only-if-needed-for-future-expansion-but-keep-the-initial-portfolio-content-client-side-no-persistence-requirement-if-any-backend-is-added-it-must-not-be-required-for-the-site-to-function",
-      "title": "Add a lightweight backend placeholder only if needed for future expansion, but keep the initial portfolio content client-side (no persistence requirement). If any backend is added, it must not be required for the site to function.",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-render-required-generated-images-as-static-assets-under-frontend-public-assets-generated-and-use-them-in-the-ui-background-texture-grain-paper-texture-and-book-material-textures",
-      "title": "Render required generated images as static assets under frontend/public/assets/generated and use them in the UI (background texture/grain, paper texture, and book material textures).",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-user-s-uploaded-portrait-photo-to-the-magazine-cover-first-page-and-style-it-to-match-the-existing-editorial-cover-aesthetic-soft-edges-shadows-paper-like-feel-the-cover-must-remain-readable-and-responsive-in-both-single-page-mobile-and-spread-desktop-layouts",
-      "title": "Add the user’s uploaded portrait photo to the magazine cover (first page) and style it to match the existing editorial cover aesthetic (soft edges/shadows, paper-like feel). The cover must remain readable and responsive in both single-page (mobile) and spread (desktop) layouts.",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-cover-page-text-content-while-keeping-the-same-font-choices-typographic-hierarchy-and-overall-layout-style-change-the-top-left-label-from-portfolio-to-shivangi-kumar-change-the-year-label-to-read-2026-collection-and-update-the-three-cover-highlight-lines-so-that-brand-design-becomes-btech-computer-science-product-design-becomes-1st-year-and-packaging-becomes-banasthali-vidyapeeth",
-      "title": "Update the cover page text content while keeping the same font choices, typographic hierarchy, and overall layout style: change the top-left label from “Portfolio” to “SHIVANGI KUMAR'”; change the year label to read “2026 collection”; and update the three cover highlight lines so that “Brand Design” becomes “BTech Computer Science”, “Product Design” becomes “1st year”, and “Packaging” becomes “Banasthali Vidyapeeth”.",
-      "reqIds": [
-        "REQ-10"
       ],
       "version": 1
     }
@@ -91,24 +26,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Create a portfolio website with background animations that match the provided image aesthetic/color scheme.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Implement a book/magazine-style portfolio UI: a book appears on screen and clicking the right side flips to the next page.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Update the magazine cover page content to match the reference aesthetic: add the user's uploaded portrait on the first page and change cover text to '2026 collection', replace 'portfolio' with \"SHIVANGI KUMAR'\", and update the listed items to 'BTech Computer Science', '1st year', and 'Banasthali Vidyapeeth' while keeping the same fonts/layout.",
+      "summary": "Update Skills page content: core programming languages (bulleted), projects built list, extra skills; remove 'Services' from page heading (Skills only).",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Animated portfolio website with book-style page-flip UI (matched to provided aesthetic)",
+  "projectName": "Convert Skills & Services page into Skills page with updated content",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

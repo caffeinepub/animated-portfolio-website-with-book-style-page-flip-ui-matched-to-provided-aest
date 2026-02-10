@@ -4,6 +4,7 @@ import { portfolioPages } from '../../features/portfolio/portfolioPages';
 import { PageFlipLayer } from './PageFlipLayer';
 import { PaginationIndicator } from './PaginationIndicator';
 import { useBookLayout } from './useBookLayout';
+import { BookNavigationProvider } from './BookNavigationContext';
 
 export function BookNavigator() {
   const [currentSpreadIndex, setCurrentSpreadIndex] = useState(0);
@@ -27,6 +28,14 @@ export function BookNavigator() {
       setFlipDirection(null);
     }, 600);
   }, [currentSpreadIndex, totalSpreads, isFlipping]);
+
+  const navigateToPortfolioPage = useCallback((pageIndex: number) => {
+    if (pageIndex < 0 || pageIndex >= totalPages) return;
+    
+    // Convert portfolio page index to spread index based on layout
+    const spreadIndex = isSinglePage ? pageIndex : Math.floor(pageIndex / 2);
+    goToPage(spreadIndex);
+  }, [isSinglePage, totalPages, goToPage]);
 
   const nextPage = useCallback(() => {
     if (currentSpreadIndex < totalSpreads - 1) {
@@ -112,37 +121,39 @@ export function BookNavigator() {
             <PageFlipLayer direction={flipDirection} />
           )}
           
-          {/* Current pages */}
-          <div className={`pages-container ${isSinglePage ? 'single' : 'spread'}`}>
-            {!isSinglePage && currentPages.length === 2 && (
-              <>
-                {/* Left page */}
-                <div className="page page-left">
+          {/* Current pages wrapped with navigation context */}
+          <BookNavigationProvider value={{ navigateToPortfolioPage }}>
+            <div className={`pages-container ${isSinglePage ? 'single' : 'spread'}`}>
+              {!isSinglePage && currentPages.length === 2 && (
+                <>
+                  {/* Left page */}
+                  <div className="page page-left">
+                    <div className="page-content">
+                      {currentPages[0]?.component}
+                    </div>
+                  </div>
+                  
+                  {/* Spine/gutter */}
+                  <div className="book-spine" />
+                  
+                  {/* Right page */}
+                  <div className="page page-right">
+                    <div className="page-content">
+                      {currentPages[1]?.component}
+                    </div>
+                  </div>
+                </>
+              )}
+              
+              {(isSinglePage || currentPages.length === 1) && (
+                <div className="page page-single">
                   <div className="page-content">
                     {currentPages[0]?.component}
                   </div>
                 </div>
-                
-                {/* Spine/gutter */}
-                <div className="book-spine" />
-                
-                {/* Right page */}
-                <div className="page page-right">
-                  <div className="page-content">
-                    {currentPages[1]?.component}
-                  </div>
-                </div>
-              </>
-            )}
-            
-            {(isSinglePage || currentPages.length === 1) && (
-              <div className="page page-single">
-                <div className="page-content">
-                  {currentPages[0]?.component}
-                </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          </BookNavigationProvider>
         </div>
       </div>
     </div>

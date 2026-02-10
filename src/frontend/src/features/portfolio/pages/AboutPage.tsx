@@ -18,10 +18,7 @@ export function AboutPage() {
               Background
             </h3>
             <p className="font-sans text-sm md:text-base text-editorial-charcoal/80 leading-relaxed">
-              A multidisciplinary designer with over 8 years of experience crafting 
-              compelling visual narratives. Specializing in brand identity, editorial 
-              design, and packaging, I bring a meticulous attention to detail and a 
-              passion for timeless aesthetics.
+              A Btech 1st year student at Banasthali Vidyapeeth with specialization in Computer Science. Graduation year:-2029
             </p>
           </div>
           
@@ -30,9 +27,7 @@ export function AboutPage() {
               Philosophy
             </h3>
             <p className="font-sans text-sm md:text-base text-editorial-charcoal/80 leading-relaxed">
-              I believe great design is invisible—it communicates effortlessly while 
-              elevating the content it serves. My approach combines strategic thinking 
-              with refined execution, always in service of the story being told.
+              I believe in making groundbreaking tech that solves problem on a large scale and for that I can co-ordinate with a team or be a one-woman team as long as the output is satisfactory
             </p>
           </div>
         </div>
@@ -45,26 +40,10 @@ export function AboutPage() {
             <div className="space-y-4">
               <div>
                 <div className="font-serif text-lg text-editorial-charcoal mb-1">
-                  Senior Designer
+                  Btech 1st year student
                 </div>
                 <div className="text-sm text-editorial-charcoal/60 font-sans">
-                  Design Studio · 2020–Present
-                </div>
-              </div>
-              <div>
-                <div className="font-serif text-lg text-editorial-charcoal mb-1">
-                  Art Director
-                </div>
-                <div className="text-sm text-editorial-charcoal/60 font-sans">
-                  Creative Agency · 2018–2020
-                </div>
-              </div>
-              <div>
-                <div className="font-serif text-lg text-editorial-charcoal mb-1">
-                  Junior Designer
-                </div>
-                <div className="text-sm text-editorial-charcoal/60 font-sans">
-                  Branding Firm · 2016–2018
+                  2025-2029
                 </div>
               </div>
             </div>

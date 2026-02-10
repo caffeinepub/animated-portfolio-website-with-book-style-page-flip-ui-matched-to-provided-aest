@@ -1,61 +1,56 @@
 {
   "kind": "build_request",
-  "title": "Update magazine cover page with user portrait and revised cover text",
+  "title": "Convert Skills & Services page into Skills page with updated content",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-9",
-      "text": "Add the user’s uploaded portrait photo to the magazine cover (first page) and style it to match the existing editorial cover aesthetic (soft edges/shadows, paper-like feel). The cover must remain readable and responsive in both single-page (mobile) and spread (desktop) layouts.",
+      "id": "REQ-1",
+      "text": "Update `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx` to remove the Services section entirely and replace the Skills content with these sections:\n- Core Skills → Programming Languages: a bulleted list containing Java, Python, C, Dart, JavaScript\n- Projects Built: a list containing Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart)\n- Extra Skills: a list containing Poet, Writer",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages-4"
+          "msg-1"
         ],
         "quotes": [
-          "ok great now on the first page of the magazine attach my picture which i am gonna attach with this message"
+          "in skills and services: core skills: 'programming languages: (bullet point all the languages) java, python, c, dart, javascript (the next heading) projects build: mini amazon-java, mini tally-java, mini calculator-c, period tracker-dart' extra skills: 'poet, writer'"
         ]
       },
       "acceptanceCriteria": [
-        "A new static image asset derived from the uploaded portrait is added under frontend/public/assets/generated and is referenced by the cover page component.",
-        "The Cover page displays the portrait in a dedicated image block (not as a full-background image) with consistent spacing and typography relative to the current cover design.",
-        "On small screens (single-page mode), the portrait scales/crops without overflowing and text remains legible (no overlap).",
-        "On larger screens (spread mode), the portrait and cover typography remain balanced and aligned; no layout shifts during page flips."
+        "The Skills page no longer renders any 'Services Offered' heading, services list, or service descriptions.",
+        "Under 'Core Skills', a 'Programming Languages' subsection displays a bullet list with exactly: Java, Python, C, Dart, JavaScript.",
+        "A 'Projects Built' section displays the four projects: Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart).",
+        "An 'Extra Skills' section displays: Poet, Writer.",
+        "All user-facing text on this page is in English."
       ]
     },
     {
-      "id": "REQ-10",
-      "text": "Update the cover page text content while keeping the same font choices, typographic hierarchy, and overall layout style: change the top-left label from “Portfolio” to “SHIVANGI KUMAR'”; change the year label to read “2026 collection”; and update the three cover highlight lines so that “Brand Design” becomes “BTech Computer Science”, “Product Design” becomes “1st year”, and “Packaging” becomes “Banasthali Vidyapeeth”.",
+      "id": "REQ-2",
+      "text": "Change the Skills page heading text from \"Skills & Services\" to \"Skills\" in `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx`, and remove 'Services' from any related page labeling used for navigation/table of contents by updating the title in `frontend/src/features/portfolio/portfolioPages.tsx` from \"Skills & Services\" to \"Skills\".",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages-4"
+          "msg-1"
         ],
         "quotes": [
-          "just how the cover page looks in aesthetic picture in the last text i sent you, you have to make it 2026 collection instead of 2029 collection and instead of portfolio written make it SHIVANGI KUMAR' keep the font and everything same now as for the part on the cover page where there is brand design is mentioned make it BTech Computer Science and where these is product design mentioned make it 1st year and where there is packaging mentioned make it Banasthali Vidyapeeth"
+          "also remove the services from the page heading make it just skills page"
         ]
       },
       "acceptanceCriteria": [
-        "frontend/src/features/portfolio/pages/CoverPage.tsx reflects the exact string “SHIVANGI KUMAR'” in place of “Portfolio”.",
-        "The cover displays “2026 collection” exactly (including the word “collection”).",
-        "The cover includes the three requested updated lines: “BTech Computer Science”, “1st year”, and “Banasthali Vidyapeeth”, styled consistently with existing cover microtype (uppercase tracking, muted charcoal) and aligned cleanly in the cover layout.",
-        "No other portfolio pages’ copy is unintentionally changed."
+        "The page H2 heading displays \"Skills\" (not \"Skills & Services\").",
+        "The Table of Contents / navigation label for the skills page displays \"Skills\" (not \"Skills & Services\")."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/components/ui (compose existing UI components instead).",
-    "Do not modify files listed in frontend.immutablePaths (use alternative components/paths if needed).",
-    "Keep the portfolio content client-side; do not add backend dependencies for the cover changes."
+    "Do not modify any files under `frontend/src/components/ui` (read-only).",
+    "Do not modify immutable hook/bootstrap files listed in SYSTEM_CONTEXT (e.g., `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`)."
   ],
   "nonGoals": [
-    "Adding new navigation behavior, new pages, or changing the page-flip animation.",
-    "Implementing authentication or user profile editing.",
-    "Editing other portfolio pages’ content beyond what is needed to keep cover styling consistent."
+    "Do not add backend (Motoko) changes; this request is frontend content/label updates only.",
+    "Do not add new pages or change the book navigation behavior beyond updating the skills page title/content."
   ],
   "imageRequirements": {
-    "required": [
-      "Cropped/retouched portrait photo (shivangi-portrait.dim_900x1200.jpg)"
-    ],
+    "required": [],
     "edits": []
   }
 }

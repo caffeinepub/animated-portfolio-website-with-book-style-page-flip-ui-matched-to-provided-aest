@@ -169,20 +169,12 @@
             2px 0 4px rgba(0, 0, 0, 0.05);
     }
     
-    /* Portrait frame styling */
-    .portrait-frame {
-        @apply relative;
-    }
-    
-    .portrait-frame img {
-        @apply transition-transform duration-300;
-    }
-    
+    /* Editorial shadow for images */
     .shadow-editorial {
         box-shadow: 
+            0 8px 24px rgba(0, 0, 0, 0.12),
             0 4px 12px rgba(0, 0, 0, 0.08),
-            0 2px 6px rgba(0, 0, 0, 0.06),
-            0 1px 3px rgba(0, 0, 0, 0.04);
+            0 2px 6px rgba(0, 0, 0, 0.06);
     }
     
     /* Page flip animation */

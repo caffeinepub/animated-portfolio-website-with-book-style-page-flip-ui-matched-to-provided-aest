@@ -2,11 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-the-user-s-uploaded-portrait-photo-to-the-magazine-cover-first-page-and-style-it-to-match-the-existing-editorial-cover-aesthetic-soft-edges-shadows-paper-like-feel-the-cover-must-remain-readable-and-responsive-in-both-single-page-mobile-and-spread-desktop-layouts",
-      "featureTitle": "Add the user’s uploaded portrait photo to the magazine cover (first page) and style it to match the existing editorial cover aesthetic (soft edges/shadows, paper-like feel). The cover must remain readable and responsive in both single-page (mobile) and spread (desktop) layouts.",
+      "featureId": "feature-update-frontend-src-features-portfolio-pages-skillsservicespage-tsx-to-remove-the-services-section-entirely-and-replace-the-skills-content-with-these-sections-core-skills-programming-languages-a-bulleted-list-containing-java-python-c-dart-javascript-projects-built-a-list-containing-mini-amazon-java-mini-tally-java-mini-calculator-c-period-tracker-dart-extra-skills-a-list-containing-poet-writer",
+      "featureTitle": "Update `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx` to remove the Services section entirely and replace the Skills content with these sections:\n- Core Skills → Programming Languages: a bulleted list containing Java, Python, C, Dart, JavaScript\n- Projects Built: a list containing Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart)\n- Extra Skills: a list containing Poet, Writer",
       "files": [
-        "frontend/src/features/portfolio/pages/CoverPage.tsx",
-        "frontend/src/index.css"
+        "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -16,15 +15,16 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-9"
+        "REQ-1"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-update-the-cover-page-text-content-while-keeping-the-same-font-choices-typographic-hierarchy-and-overall-layout-style-change-the-top-left-label-from-portfolio-to-shivangi-kumar-change-the-year-label-to-read-2026-collection-and-update-the-three-cover-highlight-lines-so-that-brand-design-becomes-btech-computer-science-product-design-becomes-1st-year-and-packaging-becomes-banasthali-vidyapeeth",
-      "featureTitle": "Update the cover page text content while keeping the same font choices, typographic hierarchy, and overall layout style: change the top-left label from “Portfolio” to “SHIVANGI KUMAR'”; change the year label to read “2026 collection”; and update the three cover highlight lines so that “Brand Design” becomes “BTech Computer Science”, “Product Design” becomes “1st year”, and “Packaging” becomes “Banasthali Vidyapeeth”.",
+      "featureId": "feature-change-the-skills-page-heading-text-from-skills-services-to-skills-in-frontend-src-features-portfolio-pages-skillsservicespage-tsx-and-remove-services-from-any-related-page-labeling-used-for-navigation-table-of-contents-by-updating-the-title-in-frontend-src-features-portfolio-portfoliopages-tsx-from-skills-services-to-skills",
+      "featureTitle": "Change the Skills page heading text from \"Skills & Services\" to \"Skills\" in `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx`, and remove 'Services' from any related page labeling used for navigation/table of contents by updating the title in `frontend/src/features/portfolio/portfolioPages.tsx` from \"Skills & Services\" to \"Skills\".",
       "files": [
-        "frontend/src/features/portfolio/pages/CoverPage.tsx"
+        "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx",
+        "frontend/src/features/portfolio/portfolioPages.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -34,7 +34,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-10"
+        "REQ-2"
       ],
       "confidence": "high"
     }
