@@ -96,8 +96,8 @@ export function BookNavigator() {
               className="absolute left-0 top-0 bottom-0 w-1/3 z-20 cursor-pointer group"
               aria-label="Previous page"
             >
-              <div className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <ChevronLeft className="w-8 h-8 text-editorial-charcoal/40" />
+              <div className="absolute left-4 top-1/2 -translate-y-1/2 opacity-30 group-hover:opacity-100 transition-opacity">
+                <ChevronLeft className="w-8 h-8 text-editorial-charcoal/60" />
               </div>
             </button>
           )}
@@ -110,9 +110,21 @@ export function BookNavigator() {
               className="absolute right-0 top-0 bottom-0 w-1/3 z-20 cursor-pointer group"
               aria-label="Next page"
             >
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <ChevronRight className="w-8 h-8 text-editorial-charcoal/40" />
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-30 group-hover:opacity-100 transition-opacity">
+                <ChevronRight className="w-8 h-8 text-editorial-charcoal/60" />
               </div>
+            </button>
+          )}
+          
+          {/* Always-visible next button for cover page */}
+          {currentSpreadIndex === 0 && totalSpreads > 1 && (
+            <button
+              onClick={nextPage}
+              disabled={isFlipping}
+              className="absolute bottom-6 right-6 z-30 bg-editorial-charcoal/10 hover:bg-editorial-charcoal/20 backdrop-blur-sm rounded-full p-3 transition-all shadow-sm"
+              aria-label="Next page"
+            >
+              <ChevronRight className="w-5 h-5 text-editorial-charcoal" />
             </button>
           )}
           

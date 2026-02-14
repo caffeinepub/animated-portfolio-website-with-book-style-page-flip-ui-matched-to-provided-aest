@@ -1,37 +1,24 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-10T12:16:25.451Z",
+  "generatedAt": "2026-02-14T15:45:58.694Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Update `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx` to remove the Services section entirely and replace the Skills content with these sections:\n- Core Skills → Programming Languages: a bulleted list containing Java, Python, C, Dart, JavaScript\n- Projects Built: a list containing Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart)\n- Extra Skills: a list containing Poet, Writer",
+        "summary": "In `frontend/src/features/portfolio/pages/AboutPage.tsx`, add a new 5th hackathon entry to the `hackathons` array for: \"Market Making Challenge organized by Quant Insider and Fintech Club, IIT ISM Dhanbad\" (listed under \"Quant Insider\"). Preserve the existing rendering style used for other hackathon entries.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx"
+          "frontend/src/features/portfolio/pages/AboutPage.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx"
-        ]
-      },
-      {
-        "id": "REQ-2",
-        "summary": "Change the Skills page heading text from \"Skills & Services\" to \"Skills\" in `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx`, and remove 'Services' from any related page labeling used for navigation/table of contents by updating the title in `frontend/src/features/portfolio/portfolioPages.tsx` from \"Skills & Services\" to \"Skills\".",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx",
-          "frontend/src/features/portfolio/portfolioPages.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx",
-          "frontend/src/features/portfolio/portfolioPages.tsx"
+          "frontend/src/features/portfolio/pages/AboutPage.tsx"
         ]
       }
     ]
@@ -41,8 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx",
-    "frontend/src/features/portfolio/portfolioPages.tsx",
+    "frontend/src/features/portfolio/pages/AboutPage.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

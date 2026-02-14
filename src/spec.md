@@ -1,11 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Convert the “Skills & Services” page into a “Skills” page by removing all services content and updating skills content and labels.
+**Goal:** Add a new hackathon entry to the About Me page’s Experience hackathons list.
 
 **Planned changes:**
-- Update `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx` to remove the Services section and replace the Skills content with: Core Skills → Programming Languages (Java, Python, C, Dart, JavaScript), Projects Built (Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart)), and Extra Skills (Poet, Writer).
-- Change the page heading from “Skills & Services” to “Skills” in `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx`.
-- Update the navigation/table-of-contents label by changing the title in `frontend/src/features/portfolio/portfolioPages.tsx` from “Skills & Services” to “Skills”.
+- Update `frontend/src/features/portfolio/pages/AboutPage.tsx` by adding a 5th item to the `hackathons` array under “Quant Insider”: “Market Making Challenge organized by Quant Insider and Fintech Club, IIT ISM Dhanbad”.
+- Keep the existing rendering style and list formatting consistent with the other hackathon entries.
 
-**User-visible outcome:** The portfolio shows a “Skills” page (and nav label) with updated skills/project lists and no services section.
+**User-visible outcome:** The About Me page (Experience section) shows the new Quant Insider hackathon entry in the Hackathons list, with the same styling as existing items.

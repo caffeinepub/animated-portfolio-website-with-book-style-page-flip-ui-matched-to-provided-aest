@@ -1,8 +1,8 @@
 export function CoverPage() {
   return (
-    <div className="h-full flex flex-col p-8 md:p-12 lg:p-16 relative">
+    <div className="h-full flex flex-col p-4 md:p-6 lg:p-8 relative overflow-hidden">
       {/* Top label row */}
-      <div className="flex justify-between items-start mb-8 md:mb-12">
+      <div className="flex justify-between items-start mb-3 md:mb-4 flex-shrink-0">
         <div className="text-xs uppercase tracking-widest text-editorial-charcoal/60 font-sans">
           SHIVANGI KUMAR'
         </div>
@@ -11,29 +11,31 @@ export function CoverPage() {
         </div>
       </div>
       
-      {/* Hero image - centered */}
-      <div className="flex-1 flex items-center justify-center mb-8 md:mb-12">
-        <div className="relative w-full max-w-md lg:max-w-lg">
-          <div className="aspect-[3/4] overflow-hidden rounded-sm shadow-editorial">
-            <img
-              src="/assets/generated/shivangi-portrait.dim_900x1200.jpg"
-              alt="Shivangi Kumar"
-              className="w-full h-full object-cover object-center"
-            />
+      {/* Hero image - centered with constrained height */}
+      <div className="flex-shrink flex items-center justify-center mb-3 md:mb-4 min-h-0 max-h-[40vh] md:max-h-[45vh]">
+        <div className="relative w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] lg:max-w-sm h-full">
+          <div className="h-full w-full flex items-center justify-center">
+            <div className="aspect-[3/4] max-h-full overflow-hidden rounded-sm shadow-editorial">
+              <img
+                src="/assets/generated/shivangi-portrait.dim_900x1200.jpg"
+                alt="Shivangi Kumar"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
           </div>
         </div>
       </div>
       
-      {/* Bottom title and highlights */}
-      <div className="space-y-6">
-        <div className="w-16 h-px bg-editorial-charcoal/20" />
+      {/* Bottom title and highlights - fixed height section */}
+      <div className="space-y-2 md:space-y-3 flex-shrink-0 mt-auto">
+        <div className="w-12 h-px bg-editorial-charcoal/20" />
         
-        <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-editorial-charcoal leading-none tracking-tight">
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-editorial-charcoal leading-none tracking-tight">
           SHIVANGI KUMAR
         </h1>
         
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-8 pt-4">
-          <div className="space-y-2">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2 md:gap-3 pt-1 md:pt-2">
+          <div className="space-y-0.5">
             <p className="font-sans text-xs uppercase tracking-wider text-editorial-charcoal/70">
               BTech Computer Science
             </p>
@@ -45,7 +47,7 @@ export function CoverPage() {
             </p>
           </div>
           
-          <div className="text-xs text-editorial-charcoal/50 font-sans">
+          <div className="text-xs text-editorial-charcoal/50 font-sans hidden md:block">
             Click right to explore →
           </div>
         </div>

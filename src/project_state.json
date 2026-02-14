@@ -1,24 +1,16 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Personal website/About Me page update: convert 'Skills and Services' section into a 'Skills' page and update listed skills/projects.",
+  "summary": "New project",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-update-frontend-src-features-portfolio-pages-skillsservicespage-tsx-to-remove-the-services-section-entirely-and-replace-the-skills-content-with-these-sections-core-skills-programming-languages-a-bulleted-list-containing-java-python-c-dart-javascript-projects-built-a-list-containing-mini-amazon-java-mini-tally-java-mini-calculator-c-period-tracker-dart-extra-skills-a-list-containing-poet-writer",
-      "title": "Update `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx` to remove the Services section entirely and replace the Skills content with these sections:\n- Core Skills → Programming Languages: a bulleted list containing Java, Python, C, Dart, JavaScript\n- Projects Built: a list containing Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart)\n- Extra Skills: a list containing Poet, Writer",
+      "id": "feature-in-frontend-src-features-portfolio-pages-aboutpage-tsx-add-a-new-5th-hackathon-entry-to-the-hackathons-array-for-market-making-challenge-organized-by-quant-insider-and-fintech-club-iit-ism-dhanbad-listed-under-quant-insider-preserve-the-existing-rendering-style-used-for-other-hackathon-entries",
+      "title": "In `frontend/src/features/portfolio/pages/AboutPage.tsx`, add a new 5th hackathon entry to the `hackathons` array for: \"Market Making Challenge organized by Quant Insider and Fintech Club, IIT ISM Dhanbad\" (listed under \"Quant Insider\"). Preserve the existing rendering style used for other hackathon entries.",
       "reqIds": [
         "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-change-the-skills-page-heading-text-from-skills-services-to-skills-in-frontend-src-features-portfolio-pages-skillsservicespage-tsx-and-remove-services-from-any-related-page-labeling-used-for-navigation-table-of-contents-by-updating-the-title-in-frontend-src-features-portfolio-portfoliopages-tsx-from-skills-services-to-skills",
-      "title": "Change the Skills page heading text from \"Skills & Services\" to \"Skills\" in `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx`, and remove 'Services' from any related page labeling used for navigation/table of contents by updating the title in `frontend/src/features/portfolio/portfolioPages.tsx` from \"Skills & Services\" to \"Skills\".",
-      "reqIds": [
-        "REQ-2"
       ],
       "version": 1
     }
@@ -26,12 +18,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Update Skills page content: core programming languages (bulleted), projects built list, extra skills; remove 'Services' from page heading (Skills only).",
+      "summary": "Update About Me page Experience section to include hackathon entry: \"Market Making Challenge\" organized by Quant Insider and Fintech Club, IIT ISM Dhanbad",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Convert Skills & Services page into Skills page with updated content",
+  "projectName": "Add Quant Insider Market Making Challenge to About Me > Experience hackathons list",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

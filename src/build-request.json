@@ -1,53 +1,35 @@
 {
   "kind": "build_request",
-  "title": "Convert Skills & Services page into Skills page with updated content",
+  "title": "Add Quant Insider Market Making Challenge to About Me > Experience hackathons list",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Update `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx` to remove the Services section entirely and replace the Skills content with these sections:\n- Core Skills → Programming Languages: a bulleted list containing Java, Python, C, Dart, JavaScript\n- Projects Built: a list containing Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart)\n- Extra Skills: a list containing Poet, Writer",
+      "text": "In `frontend/src/features/portfolio/pages/AboutPage.tsx`, add a new 5th hackathon entry to the `hackathons` array for: \"Market Making Challenge organized by Quant Insider and Fintech Club, IIT ISM Dhanbad\" (listed under \"Quant Insider\"). Preserve the existing rendering style used for other hackathon entries.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
         ],
         "quotes": [
-          "in skills and services: core skills: 'programming languages: (bullet point all the languages) java, python, c, dart, javascript (the next heading) projects build: mini amazon-java, mini tally-java, mini calculator-c, period tracker-dart' extra skills: 'poet, writer'"
+          "ok so in this in the about me page in experience section add the names of the following hackathon 5.  Quant Insider\nMarket Making Challenge organized by Quant Insider and\nFintech Club, IIT ISM Dhanbad"
         ]
       },
       "acceptanceCriteria": [
-        "The Skills page no longer renders any 'Services Offered' heading, services list, or service descriptions.",
-        "Under 'Core Skills', a 'Programming Languages' subsection displays a bullet list with exactly: Java, Python, C, Dart, JavaScript.",
-        "A 'Projects Built' section displays the four projects: Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart).",
-        "An 'Extra Skills' section displays: Poet, Writer.",
-        "All user-facing text on this page is in English."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Change the Skills page heading text from \"Skills & Services\" to \"Skills\" in `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx`, and remove 'Services' from any related page labeling used for navigation/table of contents by updating the title in `frontend/src/features/portfolio/portfolioPages.tsx` from \"Skills & Services\" to \"Skills\".",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "also remove the services from the page heading make it just skills page"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The page H2 heading displays \"Skills\" (not \"Skills & Services\").",
-        "The Table of Contents / navigation label for the skills page displays \"Skills\" (not \"Skills & Services\")."
+        "The Hackathons list on the About Me page displays the new entry: \"Market Making Challenge organized by Quant Insider and Fintech Club, IIT ISM Dhanbad\".",
+        "The new entry is included as an additional item (now 5 total hackathon items) without removing or renaming existing entries.",
+        "The new entry uses the same typography, spacing, and list styling as the other hackathon items.",
+        "The code builds successfully with TypeScript with no runtime errors on the About Me page."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under `frontend/src/components/ui` (read-only).",
-    "Do not modify immutable hook/bootstrap files listed in SYSTEM_CONTEXT (e.g., `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`)."
+    "Do not modify any files in `frontend/src/components/ui` or the immutable hook files listed in `frontend.immutablePaths`.",
+    "Keep all changes scoped to updating the hackathons list in `frontend/src/features/portfolio/pages/AboutPage.tsx`. No backend changes."
   ],
   "nonGoals": [
-    "Do not add backend (Motoko) changes; this request is frontend content/label updates only.",
-    "Do not add new pages or change the book navigation behavior beyond updating the skills page title/content."
+    "Adding or changing certificate image/PDF assets for the new hackathon entry (no certificate URL was provided).",
+    "Changing page layout, navigation, or styling beyond what is required to show the new hackathon name."
   ],
   "imageRequirements": {
     "required": [],

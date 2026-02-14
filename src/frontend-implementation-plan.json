@@ -1,43 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update Skills page content and labeling",
+  "title": "Add Quant Insider Market Making Challenge to About page hackathons list",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Convert the Skills & Services content into a Skills-only page with the specified sections and lists.",
+      "summary": "Add the Quant Insider Market Making Challenge as the 5th item in the About page hackathons array while preserving existing rendering.",
       "acceptanceCriteria": [
-        "The Skills page no longer renders any 'Services Offered' heading, services list, or service descriptions.",
-        "Under 'Core Skills', a 'Programming Languages' subsection displays a bullet list with exactly: Java, Python, C, Dart, JavaScript.",
-        "A 'Projects Built' section displays the four projects: Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart).",
-        "An 'Extra Skills' section displays: Poet, Writer.",
-        "All user-facing text on this page is in English."
+        "The Hackathons list on the About Me page displays the new entry: \"Market Making Challenge organized by Quant Insider and Fintech Club, IIT ISM Dhanbad\".",
+        "The new entry is included as an additional item (now 5 total hackathon items) without removing or renaming existing entries.",
+        "The new entry uses the same typography, spacing, and list styling as the other hackathon items.",
+        "The code builds successfully with TypeScript with no runtime errors on the About Me page."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx",
+          "path": "frontend/src/features/portfolio/pages/AboutPage.tsx",
           "operation": "modify",
-          "description": "Remove the Services section entirely and replace existing skills data/rendering with three Skills-focused sections: Core Skills (Programming Languages bullet list: Java, Python, C, Dart, JavaScript), Projects Built (list: Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart)), and Extra Skills (list: Poet, Writer). Ensure no services-related headings or descriptions remain and all displayed text is English."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Rename the page heading and navigation/table-of-contents label from 'Skills & Services' to 'Skills'.",
-      "acceptanceCriteria": [
-        "The page H2 heading displays \"Skills\" (not \"Skills & Services\").",
-        "The Table of Contents / navigation label for the skills page displays \"Skills\" (not \"Skills & Services\")."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx",
-          "operation": "modify",
-          "description": "Update the page H2 heading text from \"Skills & Services\" to \"Skills\" while preserving existing layout/styling conventions."
-        },
-        {
-          "path": "frontend/src/features/portfolio/portfolioPages.tsx",
-          "operation": "modify",
-          "description": "Update the portfolio page title/label for the skills page from \"Skills & Services\" to \"Skills\" so the table of contents/navigation reflects the new label."
+          "description": "Append a new (5th) object to the existing `hackathons` array with `name` exactly \"Market Making Challenge organized by Quant Insider and Fintech Club, IIT ISM Dhanbad\" (listed under Quant Insider), keeping the array structure consistent with existing entries and not altering the rendering markup or styling."
         }
       ]
     }

@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-frontend-src-features-portfolio-pages-skillsservicespage-tsx-to-remove-the-services-section-entirely-and-replace-the-skills-content-with-these-sections-core-skills-programming-languages-a-bulleted-list-containing-java-python-c-dart-javascript-projects-built-a-list-containing-mini-amazon-java-mini-tally-java-mini-calculator-c-period-tracker-dart-extra-skills-a-list-containing-poet-writer",
-      "featureTitle": "Update `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx` to remove the Services section entirely and replace the Skills content with these sections:\n- Core Skills → Programming Languages: a bulleted list containing Java, Python, C, Dart, JavaScript\n- Projects Built: a list containing Mini Amazon (Java), Mini Tally (Java), Mini Calculator (C), Period Tracker (Dart)\n- Extra Skills: a list containing Poet, Writer",
+      "featureId": "feature-in-frontend-src-features-portfolio-pages-aboutpage-tsx-add-a-new-5th-hackathon-entry-to-the-hackathons-array-for-market-making-challenge-organized-by-quant-insider-and-fintech-club-iit-ism-dhanbad-listed-under-quant-insider-preserve-the-existing-rendering-style-used-for-other-hackathon-entries",
+      "featureTitle": "In `frontend/src/features/portfolio/pages/AboutPage.tsx`, add a new 5th hackathon entry to the `hackathons` array for: \"Market Making Challenge organized by Quant Insider and Fintech Club, IIT ISM Dhanbad\" (listed under \"Quant Insider\"). Preserve the existing rendering style used for other hackathon entries.",
       "files": [
-        "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx"
+        "frontend/src/features/portfolio/pages/AboutPage.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -16,25 +16,6 @@
       ],
       "testIds": [
         "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-change-the-skills-page-heading-text-from-skills-services-to-skills-in-frontend-src-features-portfolio-pages-skillsservicespage-tsx-and-remove-services-from-any-related-page-labeling-used-for-navigation-table-of-contents-by-updating-the-title-in-frontend-src-features-portfolio-portfoliopages-tsx-from-skills-services-to-skills",
-      "featureTitle": "Change the Skills page heading text from \"Skills & Services\" to \"Skills\" in `frontend/src/features/portfolio/pages/SkillsServicesPage.tsx`, and remove 'Services' from any related page labeling used for navigation/table of contents by updating the title in `frontend/src/features/portfolio/portfolioPages.tsx` from \"Skills & Services\" to \"Skills\".",
-      "files": [
-        "frontend/src/features/portfolio/pages/SkillsServicesPage.tsx",
-        "frontend/src/features/portfolio/portfolioPages.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
       ],
       "confidence": "high"
     }
